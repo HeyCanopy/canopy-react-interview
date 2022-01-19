@@ -1,1 +1,1 @@
-# canopy-ux-interview
+# Canopy React Interview
