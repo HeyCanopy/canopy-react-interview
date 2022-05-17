@@ -7,53 +7,100 @@
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: #1d263d;
+  color: #fff5ee;
   font-family: "Roboto", sans-serif;
   display: flex;
   /* align-items: center; */
   justify-content: center;
   min-height: 100vh;
   padding: 2rem;
+  padding-top: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  padding-top: 2px;
+  font-size: 30px;
+}
+
+#canopyLogo {
+  width: 200px;
+}
+
+.st2 {
+  fill: #fff5ee !important;
+}
+
+header h1,
+p {
+  margin: 0px;
 }
 
 h1 {
   margin: 2rem;
 }
 
+#gameContainer {
+  position: relative;
+}
+
 .board {
-  border: 1rem solid #ff652f;
-  background: #ff652f;
+  border: 0px;
   width: 500px;
   height: 500px;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  gap: 1rem;
+  gap: 20px;
+  margin-bottom: 40px;
 }
 
 .squares {
-  background: #272727;
+  background-color: #fff5ee;
+  color: #1d263d;
   border: none;
-  font-size: 5rem;
-  /* font-weight: 800; */
+  font-size: 75px;
+  font-weight: 600;
   cursor: pointer;
   outline: none;
 }
 
+.winningSquare {
+  background-color: #00b8ac;
+}
+/*#00b8ac*/
 .X {
-  color: red;
+  color: #1d263d;
 }
 .O {
-  color: green;
+  color: #1d263d;
 }
 
 .info-wrapper {
   display: flex;
   justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-h3 {
-  padding: 1rem;
+.info-wrapper h3 {
+  padding-left: 0px;
+  margin-bottom: 0px;
+  font-size: 30px;
+}
+
+.winnerStatus {
+  color: #00b8ac;
+}
+
+.gameStatus {
+  color: #fff5ee;
 }
 
 li {
@@ -62,10 +109,70 @@ li {
 
 .info-wrapper button {
   background: #272727;
-  color: white;
+  color: #fff5ee;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 0.5rem;
   margin: 0.5rem 1rem;
+}
+
+#undoButton {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+}
+
+#undoButton:hover {
+  filter: invert(50%) sepia(79%) saturate(1147%) hue-rotate(136deg)
+    brightness(91%) contrast(101%);
+}
+
+#redoButton {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+}
+
+#leftMenu {
+  position: absolute;
+  left: -110px;
+  top: 240px;
+}
+
+#rightMenu {
+  position: absolute;
+  right: -110px;
+  top: 240px;
+}
+
+#playAgainButton {
+  width: 500px;
+  height: 70px;
+  background-color: #00b8ac;
+
+  color: #272727;
+  font-size: 25px;
+  font-weight: 600;
+  border: 0px;
+}
+
+#resetButton {
+  background-color: #fff5ee;
+  cursor: pointer;
+  color: #272727;
+  font-size: 25px;
+  font-weight: 600;
+  border: 0px;
+  width: 500px;
+  height: 70px;
+}
+
+#resetButton:hover {
+  background-color: #00b8ac;
+}
+
+#playAgainButton:hover {
+  color: white;
+  cursor: pointer;
 }
