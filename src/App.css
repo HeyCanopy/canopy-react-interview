@@ -118,4 +118,5 @@ li {
 
 .resetBoard:hover {
   border: 2px solid white;
+  cursor: pointer;
 }
