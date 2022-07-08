@@ -22,13 +22,14 @@ h1 {
 }
 
 .board {
-  border: 1rem solid #ff652f;
+  border: 0.5rem solid #ff652f;
   background: #ff652f;
   width: 500px;
   height: 500px;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  gap: 1rem;
+  gap: 0.5rem;
+  border-radius: 10px;
 }
 
 .squares {
@@ -38,13 +39,37 @@ h1 {
   /* font-weight: 800; */
   cursor: pointer;
   outline: none;
+  border-radius: 10px;
+
+  transition: all .2s ease-in-out;
+}
+
+/*  citing: https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/ */
+.squares:hover {
+  transform: scale(1.05);
+}
+
+.squares-winner {
+  background: green;
+  border: none;
+  font-size: 5rem;
+  /* font-weight: 800; */
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+
+  transition: all .2s ease-in-out;
+}
+
+.squares-winner:hover {
+  transform: scale(1.05);
 }
 
 .X {
   color: red;
 }
 .O {
-  color: green;
+  color: blue;
 }
 
 .info-wrapper {
@@ -68,4 +93,12 @@ li {
   cursor: pointer;
   padding: 0.5rem;
   margin: 0.5rem 1rem;
+}
+
+.hover {
+  display: none;
+}
+
+.hover:hover {
+  display: inline;
 }
