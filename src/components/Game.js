@@ -37,6 +37,12 @@ const Game = () => {
       );
     });
   
+    const resetBoard = () => {
+      setHistory([Array(9).fill(null)])
+      setStepNumber(0)
+      setXisNext(true)
+    }
+  
   return (
     <>
       <h1>React Tic Tac Toe - With Hooks</h1>
@@ -47,6 +53,7 @@ const Game = () => {
           {renderMoves()}
         </div>
         <h3>{winner ? "Winner: " + winner[0] : "Next Player: " + xO}</h3>
+        {winner && <div className={'resetBoard'} onClick={resetBoard}>Reset Board</div>}
       </div>
     </>
   );

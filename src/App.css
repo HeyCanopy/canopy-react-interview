@@ -102,3 +102,20 @@ li {
 .hover:hover {
   display: inline;
 }
+
+.resetBoard {
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #272727;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.resetBoard:hover {
+  border: 2px solid white;
+}
